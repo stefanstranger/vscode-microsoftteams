@@ -1,24 +1,54 @@
 {
     "name": "vscode-microsoftteams",
     "displayName": "vscode-microsoftteams",
-    "description": "\"VSCode Extension for Microsoft Teams\"",
+    "description": "\"Send messages and files to Microsoft Teams from Visual Studio Code\"",
     "version": "0.0.1",
-    "publisher": "Stefan",
+    "publisher": "sstranger",
     "engines": {
-        "vscode": "^1.11.0"
+        "vscode": "^1.10.0"
     },
     "categories": [
         "Other"
     ],
+    "keywords": [
+        "MicrosoftTeams",
+        "chat",
+        "communication",
+        "collaboration"
+    ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.postMessage",
+        "onCommand:extension.postCurrentFile"
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
+        "commands": [
+            {
+                "command": "extension.postMessage",
+                "title": "Microsoft Teams: Post Message"
+            },
+            {
+                "command": "extension.postCurrentFile",
+                "title": "Microsoft Teams: Post Current File"
+            }
+        ]
+    },
+    "keybindings": [
+        {
+            "command": "micrsoftteams.postMessage",
+            "key": "ctrl+alt+m"
+        }
+    ],
+    "configuration": {
+        "type": "object",
+        "title": "Visual Studio Code Microsoft Teams configuration",
+        "properties": {
+            "microsoftteams.teamswebhook": {
+                "type": "string",
+                "default": "",
+                "description": "Microsoft Teams Webhook"
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
