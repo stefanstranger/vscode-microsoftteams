@@ -1,67 +1,68 @@
 {
-    "name": "vscode-microsoftteams",
-    "displayName": "vscode-microsoftteams",
-    "description": "\"Send messages and files to Microsoft Teams from Visual Studio Code\"",
-    "icon": "icon.png",
-    "version": "1.0.1",
-    "publisher": "stefanstranger",
-    "engines": {
-        "vscode": "^1.10.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "keywords": [
-        "MicrosoftTeams",
-        "chat",
-        "communication",
-        "collaboration"
-    ],
-    "activationEvents": [
-        "onCommand:extension.postMessage",
-        "onCommand:extension.postCurrentFile"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "extension.postMessage",
-                "title": "Microsoft Teams: Post Message"
-            },
-            {
-                "command": "extension.postCurrentFile",
-                "title": "Microsoft Teams: Post Current File"
-            }
-        ]
-    },
-    "keybindings": [
-        {
-            "command": "micrsoftteams.postMessage",
-            "key": "ctrl+alt+m"
-        }
-    ],
-    "configuration": {
-        "type": "object",
-        "title": "Visual Studio Code Microsoft Teams configuration",
-        "properties": {
-            "microsoftteams.teamswebhook": {
-                "type": "string",
-                "default": "",
-                "description": "Microsoft Teams Webhook"
-            }
-        }
-    },
-    "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+  "name": "vscode-microsoftteams",
+  "displayName": "vscode-microsoftteams",
+  "description": "\"Send messages and files to Microsoft Teams from Visual Studio Code\"",
+  "icon": "icon.png",
+  "version": "1.0.1",
+  "publisher": "stefanstranger",
+  "engines": {
+    "vscode": "^1.10.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "MicrosoftTeams",
+    "chat",
+    "communication",
+    "collaboration"
+  ],
+  "activationEvents": [
+    "onCommand:extension.postMessage",
+    "onCommand:extension.postCurrentFile"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.postMessage",
+        "title": "Microsoft Teams: Post Message"
+      },
+      {
+        "command": "extension.postCurrentFile",
+        "title": "Microsoft Teams: Post Current File"
+      }
+    ]
+  },
+  "keybindings": [
+    {
+      "command": "micrsoftteams.postMessage",
+      "key": "ctrl+alt+m"
     }
+  ],
+  "configuration": {
+    "type": "object",
+    "title": "Visual Studio Code Microsoft Teams configuration",
+    "properties": {
+      "microsoftteams.teamswebhook": {
+        "type": "string",
+        "default": "",
+        "description": "Microsoft Teams Webhook"
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.69",
+    "@types/request": "0.0.42",
+    "mocha": "^2.3.3",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  }
 }

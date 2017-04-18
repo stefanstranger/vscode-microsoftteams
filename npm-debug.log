@@ -1,0 +1,51 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   '-D',
+1 verbose cli   '@types\\request' ]
+2 info using npm@4.0.1
+3 info using node@v4.1.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData @types\request
+8 silly fetchOtherPackageData @types\request
+9 silly cache add args [ '@types\\request', null ]
+10 verbose cache add spec @types\request
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: '@types\\request',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: '@types\\request',
+11 silly cache add   spec: 'C:\\Users\\stefstr\\Documents\\GitHub\\vscode-microsoftteams\\@types\\request',
+11 silly cache add   type: 'local' }
+12 error addLocal Could not install C:\Users\stefstr\Documents\GitHub\vscode-microsoftteams\@types\request
+13 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\stefstr\Documents\GitHub\vscode-microsoftteams\@types\request'
+13 silly fetchPackageMetaData     at Error (native)
+13 silly fetchPackageMetaData  error for @types\request { [Error: ENOENT: no such file or directory, open 'C:\Users\stefstr\Documents\GitHub\vscode-microsoftteams\@types\request']
+13 silly fetchPackageMetaData   errno: -4058,
+13 silly fetchPackageMetaData   code: 'ENOENT',
+13 silly fetchPackageMetaData   syscall: 'open',
+13 silly fetchPackageMetaData   path: 'C:\\Users\\stefstr\\Documents\\GitHub\\vscode-microsoftteams\\@types\\request' }
+14 silly rollbackFailedOptional Starting
+15 silly rollbackFailedOptional Finishing
+16 silly runTopLevelLifecycles Finishing
+17 silly install printInstalled
+18 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\stefstr\Documents\GitHub\vscode-microsoftteams\@types\request'
+18 verbose stack     at Error (native)
+19 verbose cwd C:\Users\stefstr\Documents\GitHub\vscode-microsoftteams
+20 error Windows_NT 10.0.14393
+21 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "-D" "@types\\request"
+22 error node v4.1.1
+23 error npm  v4.0.1
+24 error path C:\Users\stefstr\Documents\GitHub\vscode-microsoftteams\@types\request
+25 error code ENOENT
+26 error errno -4058
+27 error syscall open
+28 error enoent ENOENT: no such file or directory, open 'C:\Users\stefstr\Documents\GitHub\vscode-microsoftteams\@types\request'
+29 error enoent ENOENT: no such file or directory, open 'C:\Users\stefstr\Documents\GitHub\vscode-microsoftteams\@types\request'
+29 error enoent This is most likely not a problem with npm itself
+29 error enoent and is related to npm not being able to find a file.
+30 verbose exit [ -4058, true ]
