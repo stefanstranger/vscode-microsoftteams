@@ -45,16 +45,56 @@ class MicrosoftTeams {
                             // Display a message box to the user
                             vscode.window.showInformationMessage('Message Posted');
                         }
+                        else if (body == 'Invalid webhook URL') {
+                            //throw 'Invalid webhook URL';
+                            vscode.window.showErrorMessage('Invalid webhook URL');
+                        }
                         else
-                            //console.log(error);
+                            //console.log(error); 
                             vscode.window.showErrorMessage(error);
                     });
                 });
-
-
-
             };
         });
+    }
+
+    // Upload current file
+    public UploadFileCurrent() {
+        var activedocument = vscode.window.activeTextEditor.document.getText();
+        // Added Code Markdown characters
+        var document: string = "\`\`\`" + "\n" + activedocument + "\n" + "\`\`\`"
+
+        // Select Webhook uri from settings
+        var microsoftteams = new MicrosoftTeams;
+        var team = microsoftteams.pickTeams()
+        team.then(item => {
+            //console.log(webhooks[item]);
+            this.savedWebhook = webhooks[item];
+
+            var options: any = {
+                url: this.savedWebhook, // Retrieve Webhook uri from settings.
+                method: 'POST',
+                json: { text: document } // TODO Add title parameter
+
+            };
+            //Start the request
+            request(options, function (error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    //console.log(body);
+                    // Display a message box to the user
+                    vscode.window.showInformationMessage('Message Posted');
+                }
+                else if (body == 'Invalid webhook URL') {
+                    //throw 'Invalid webhook URL';
+                    vscode.window.showErrorMessage('Invalid webhook URL');
+                }
+                else
+                    //console.log(error); 
+                    vscode.window.showErrorMessage(error);
+            });
+        });
+
+
     }
 
     dispose() {
@@ -71,6 +111,8 @@ export function activate(context: vscode.ExtensionContext) {
         let microsoftteams = new MicrosoftTeams();
         // send typed message
         vscode.commands.registerCommand('extension.postMessage', () => microsoftteams.postMessage());
+        // send current file
+        vscode.commands.registerCommand('extension.postCurrentFile', () => microsoftteams.UploadFileCurrent());
 
         // Add to a list of disposables which are disposed when this extension is deactivated.
         context.subscriptions.push(microsoftteams);
