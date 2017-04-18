@@ -49,7 +49,7 @@ If you have any requirements or dependencies, add a section describing those and
 
 ## Release Notes
 
-### 1.0.0
+### 1.0.3
 
 Initial release of the Visual Studio Code Microsoft Teams extension.
 
