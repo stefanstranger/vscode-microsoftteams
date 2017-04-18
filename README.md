@@ -44,7 +44,8 @@ If you have any requirements or dependencies, add a section describing those and
 
 ## Known Issues
 
-Some code formatting issues when sending current file.
+* Some code formatting issues when sending current file.
+* Keyboard short-cut is not working yet.
 
 ## Release Notes
 
