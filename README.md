@@ -1,65 +1,57 @@
-# vscode-microsoftteams README
+# Visual Studio Code Microsoft Teams extension
 
-This is the README for your extension "vscode-microsoftteams". After writing up a brief description, we recommend including the following sections.
+This extension is not created by, affilated with, or supported by Microsoft.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+With the extension you can send messages to multiple Microsoft Teams using configured webhooks for those teams.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+The following features are currently implemented:
+1. Send message to a Microsoft Team
+2. Send current open file in vscode to a Microsoft Team
 
 ## Requirements
 
+Before you can use this extension you first need to configure a webhook in Microsoft Teams for the team you want to post messages to.
+
+### Create the webhook
+Follow the steps below to see how to send a simple card to a connector:
+1. From within Microsoft Teams, click ... next to the channel name and then select Connectors.
+2. Scroll through the list of connectors to Incoming Webhook, and click Add.
+3. Enter a name for the webhook, upload an image to associate with data from the webhook, and select Create.
+4. Copy the webhook to the clipboard and save it. You'll need the webhook URL for sending information to Microsoft Teams.
+6. Click Done.
+
+After saving the webhook(s) you need to configure the following vscode settings.
+
+Go to User Settings (File > Preferences > User Settings) and add the following 
+```
+    // Microsoft Teams Webhooks
+    "microsoftteams.teamswebhook": {
+        "<your microsoft team name>: "<webhook>",
+        "<your microsoft team name>: "<webhook>"
+    }
+```
+
+* ##### `"microsoft teams name"` (required)
+    * You can enter any name you like as long as you know which team it represents.
+
+* ##### `"webhook"` (required)
+    * Enter the webhook value you copied when creating the Microsoft Team Webhook
+
+
 If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Some code formatting issues when sending current file.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Initial release of the Visual Studio Code Microsoft Teams extension.
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Added features Send Message and current file.
 
 -----------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
