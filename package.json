@@ -2,7 +2,8 @@
     "name": "vscode-microsoftteams",
     "displayName": "vscode-microsoftteams",
     "description": "\"Send messages and files to Microsoft Teams from Visual Studio Code\"",
-    "version": "0.0.1",
+    "icon": "icon.png",
+    "version": "1.0.1",
     "publisher": "stefanstranger",
     "engines": {
         "vscode": "^1.10.0"
