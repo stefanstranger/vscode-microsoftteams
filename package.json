@@ -3,8 +3,16 @@
     "displayName": "vscode-microsoftteams",
     "description": "Send messages and files to Microsoft Teams from Visual Studio Code",
     "icon": "icon.png",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "stefanstranger",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stefanstranger/vscode-microsoftteams"
+    },
+    "homepage": "https://github.com/stefanstranger/vscode-microsoftteams/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/stefanstranger/vscode-microsoftteams/issues"
+    },
     "engines": {
         "vscode": "^1.10.0"
     },
@@ -35,10 +43,7 @@
         ]
     },
     "keybindings": [
-        {
-            "command": "micrsoftteams.postMessage",
-            "key": "ctrl+alt+m" //does not work
-        }
+        {}
     ],
     "configuration": {
         "type": "object",
