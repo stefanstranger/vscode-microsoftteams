@@ -17,3 +17,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.0.5] - 04-20-2017
 ### Added
 - Improved README
+
+## [1.0.6] - 04-26-2017
+### Added
+- Fixed Issue with Setting file.

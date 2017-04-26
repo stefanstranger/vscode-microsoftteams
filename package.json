@@ -3,7 +3,7 @@
     "displayName": "vscode-microsoftteams",
     "description": "Send messages and files to Microsoft Teams from Visual Studio Code",
     "icon": "icon.png",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "publisher": "stefanstranger",
     "repository": {
         "type": "git",
@@ -46,7 +46,7 @@
             "title": "Visual Studio Code Microsoft Teams configuration",
             "properties": {
                 "microsoftteams.teamswebhook": {
-                    "type": "string",
+                    "type": "object",
                     "default": "",
                     "description": "Microsoft Teams Webhook"
                 }

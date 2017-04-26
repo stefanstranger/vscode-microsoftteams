@@ -46,11 +46,6 @@ If you have any requirements or dependencies, add a section describing those and
 
 * Some code formatting issues when sending current file.
 * Keyboard short-cut is not working yet.
-* Configuration Setting is showing 'Unknow Configuration Setting' but extension is working correctly.
-Issue is tracked on [Github Repository Issues](https://github.com/stefanstranger/vscode-microsoftteams/issues/1)
-
-![error](https://i.stack.imgur.com/DwyD3.png "Error")
-
 
 ## Release Notes
 
@@ -67,4 +62,8 @@ Initial release of the Visual Studio Code Microsoft Teams extension to the Marke
 ### 1.0.5
 
 Improved README.md file
+
+### 1.0.
+
+Fixed Configuration Setting issue.
 -----------------------------------------------------------------------------------------------------------
