@@ -40,19 +40,16 @@
                 "command": "extension.postCurrentFile",
                 "title": "Microsoft Teams: Post Current File"
             }
-        ]
-    },
-    "keybindings": [
-        {}
-    ],
-    "configuration": {
-        "type": "object",
-        "title": "Visual Studio Code Microsoft Teams configuration",
-        "properties": {
-            "microsoftteams.teamswebhook": {
-                "type": "string",
-                "default": "",
-                "description": "Microsoft Teams Webhook"
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Visual Studio Code Microsoft Teams configuration",
+            "properties": {
+                "microsoftteams.teamswebhook": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Microsoft Teams Webhook"
+                }
             }
         }
     },
