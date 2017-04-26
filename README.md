@@ -63,7 +63,7 @@ Initial release of the Visual Studio Code Microsoft Teams extension to the Marke
 
 Improved README.md file
 
-### 1.0.
+### 1.0.6
 
 Fixed Configuration Setting issue.
 -----------------------------------------------------------------------------------------------------------
